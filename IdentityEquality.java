@@ -33,7 +33,7 @@ public class Main {
         }
 
         @Override
-        public boolean equals(User obj) {
+        public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
