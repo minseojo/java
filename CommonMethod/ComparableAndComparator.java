@@ -7,10 +7,26 @@ import static java.lang.Integer.compare;
 public class ComparableAndComparator{
     public static void main(String[] args) {
         //primitiveCompare();
-        referenceCompare();
+        //referenceCompare();
+        priorityQueueTest();
     }
 
-    public static class User implements Comparator{
+    public static void priorityQueueTest() {
+        Queue<User> pq = new PriorityQueue<>();
+        User user1 = new User("조민서", 3);
+        User user2 = new User("조민서", 2);
+        User user3 = new User("가오리", 4);
+        User user4 = new User("가오리", 1);
+        pq.add(user1);
+        pq.add(user2);
+        pq.add(user3);
+        pq.add(user4);
+        while(!pq.isEmpty()) {
+            User user = pq.poll();
+            System.out.println(user.name + " " + user.age);
+        }
+    }
+    public static class User implements Comparable{
         String name;
         int age;
 
@@ -19,21 +35,30 @@ public class ComparableAndComparator{
             this.age = age;
         }
 
-
         @Override
-        public int compare(Object o1, Object o2) {
-            User user1 = (User) o1;
-            User user2 = (User) o2;
-            return Integer.compare(user1.age, user2.age);
+        public int compareTo(Object o) {
+            User user = (User) o;
+            if(this.name == user.name) {
+                return Integer.compare(this.age, user.age); // 이름이 같으면, 나이는 오름차순
+            } else {
+                return this.name.compareTo(user.name); // 이름이 다르면, 이름 오름차순
+            }
         }
     }
     public static void referenceCompare() {
         User user1 = new User("조민서", 100);
         User user2 = new User("나비", 3000);
-        User comp = new User("", 0); // 비교용 객체
+        User user3 = new User("가오리", 40);
 
-        System.out.println(comp.compare(user1, user2));
-        System.out.println(comp.compare(user1, user2));
+        List<User> list = new ArrayList<>();
+        list.add(user1);
+        list.add(user2);
+        list.add(user3);
+
+        list.sort((User a, User b) -> Integer.compare(a.age, b.age));
+        for(User user : list) {
+            System.out.println(user.name + " " + user.age);
+        }
 
     }
 
