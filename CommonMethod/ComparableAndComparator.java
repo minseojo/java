@@ -10,7 +10,7 @@ public class ComparableAndComparator{
         referenceCompare();
     }
 
-    public static class User implements Comparable{
+    public static class User implements Comparator{
         String name;
         int age;
 
@@ -20,13 +20,11 @@ public class ComparableAndComparator{
         }
 
         @Override
-        public int compareTo(Object o) {
-            User user = (User) o;
-            if(this.age > user.age) return 1;
-            else if(this.age == user.age) return 0;
-            else return -1;
+        public int compare(Object o1, Object o2) {
+            User user1 = (User) o1;
+            User user2 = (User) o2;
+            return Integer.compare(user1.age, user2.age);
         }
-
     }
     public static void referenceCompare() {
         User user1 = new User("조민서", 100);
@@ -40,7 +38,7 @@ public class ComparableAndComparator{
 
         Collections.sort(list);
         for(User user : list) {
-            System.out.println(user.name + " " + user.age) ;
+            System.out.println(user.name + " " + user.age);
         }
 
     }
