@@ -19,6 +19,7 @@ public class ComparableAndComparator{
             this.age = age;
         }
 
+
         @Override
         public int compare(Object o1, Object o2) {
             User user1 = (User) o1;
@@ -28,18 +29,11 @@ public class ComparableAndComparator{
     }
     public static void referenceCompare() {
         User user1 = new User("조민서", 100);
-        User user3 = new User("나비", 3000);
-        User user2 = new User("가오리", 40);
+        User user2 = new User("나비", 3000);
+        User comp = new User("", 0); // 비교용 객체
 
-        List<User> list = new ArrayList<>();
-        list.add(user1);
-        list.add(user2);
-        list.add(user3);
-
-        Collections.sort(list);
-        for(User user : list) {
-            System.out.println(user.name + " " + user.age);
-        }
+        System.out.println(comp.compare(user1, user2));
+        System.out.println(comp.compare(user1, user2));
 
     }
 
