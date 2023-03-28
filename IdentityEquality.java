@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Random;
 
-public class Main {
+public class IdentityEquality {
     public static void main(String[] args) {
         User userA = new User("A", 0); //name, age, money
         System.out.println("userA.hashCode() = " + userA.hashCode());
@@ -22,7 +22,7 @@ public class Main {
 
     }
 
-    static class User implements org.example.User {
+    static class User {
         private String name;
         private int age;
 
@@ -38,10 +38,10 @@ public class Main {
                 return true;
             }
 
-            String objName = obj.name;
-            int objAge = obj.age;
             if (obj instanceof User) {
-                if(objName.equals(this.name)
+                String objName =  ((User) obj).name;
+                int objAge =  ((User) obj).age;
+                if(this.name.equals(objName)
                         && objAge == this.age) { return true;}
             }
 
