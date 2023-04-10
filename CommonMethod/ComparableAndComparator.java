@@ -1,3 +1,4 @@
+// https://velog.io/@minseojo/Java-Comparable-Comparator
 package org.example.CommonMethod;
 
 import java.util.*;
