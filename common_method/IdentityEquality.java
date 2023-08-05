@@ -1,5 +1,5 @@
 //https://velog.io/@minseojo/Java-%EB%8F%99%EC%9D%BC%EC%84%B1%EA%B3%BC-%EB%8F%99%EB%93%B1%EC%84%B1
-package org.example.CommonMethod;
+package org.example.common_method;
 
 import java.util.Random;
 

@@ -1,9 +1,7 @@
 // https://velog.io/@minseojo/Java-Comparable-Comparator
-package org.example.CommonMethod;
+package org.example.common_method;
 
 import java.util.*;
-
-import static java.lang.Integer.compare;
 
 public class ComparableAndComparator{
     public static void main(String[] args) {
