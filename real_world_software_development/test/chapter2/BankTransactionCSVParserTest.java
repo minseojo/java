@@ -1,9 +1,8 @@
 package org.example.real_world_software_development.test.chapter2;
 
-import org.example.real_world_software_development.chapter_02.BankStatementCSVParser;
-import org.example.real_world_software_development.chapter_02.BankStatementParser;
-import org.example.real_world_software_development.chapter_02.BankTransaction;
-import org.junit.Assert;
+import org.example.real_world_software_development.main.chapter_02.BankStatementCSVParser;
+import org.example.real_world_software_development.main.chapter_02.BankStatementParser;
+import org.example.real_world_software_development.main.chapter_02.BankTransaction;
 import org.junit.Test;
 
 import java.time.LocalDate;
