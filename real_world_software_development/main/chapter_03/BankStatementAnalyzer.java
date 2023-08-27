@@ -9,7 +9,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 public class BankStatementAnalyzer {
-    private static final String RESOURCES = "real_world_software_development/main/resources/";
+    private static final String RESOURCES = "main/resources/";
 
     public void analyze(final String fileName,
                         final BankStatementParser bankStatementParser) throws IOException {

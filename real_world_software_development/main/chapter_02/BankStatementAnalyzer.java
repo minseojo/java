@@ -8,7 +8,7 @@ import java.time.Month;
 import java.util.List;
 
 public class BankStatementAnalyzer {
-    private static final String RESOURCES = "real_world_software_development/resources/";
+    private static final String RESOURCES = "main/resources/";
     public void analyze(final String fileName, final BankStatementParser bankStatementParser) throws IOException {
 
         final Path path = Paths.get(RESOURCES + fileName);
