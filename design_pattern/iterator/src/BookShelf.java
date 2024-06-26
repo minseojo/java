@@ -4,14 +4,18 @@ import java.util.List;
 
 public class BookShelf implements Iterable<Book> {
 
-    private List<Book> books = new ArrayList<>();
+    private List<Book> books;
+
+    BookShelf(int initialCapacity) {
+        this.books = new ArrayList<>(initialCapacity);
+    }
 
     public Book getBookAt(int index) {
         return books.get(index);
     }
 
-    public boolean appendBook(Book book) {
-        return books.add(book);
+    public void appendBook(Book book) {
+        books.add(book);
     }
 
     public int getLength() {

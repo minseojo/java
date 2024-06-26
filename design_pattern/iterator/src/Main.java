@@ -2,7 +2,7 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        BookShelf bookShelf = new BookShelf();
+        BookShelf bookShelf = new BookShelf(4);
         bookShelf.appendBook(new Book("JAVA 언어로 배우는 디자인 패턴 입문"));
         bookShelf.appendBook(new Book("자바 알고리즘 인터뷰"));
         bookShelf.appendBook(new Book("명품 운영체제"));
