@@ -1,0 +1,4 @@
+#Thu Jun 27 01:57:45 KST 2024
+depth=32
+width=1024
+height=512
