@@ -3,7 +3,7 @@ package problem;
 import java.io.*;
 import java.util.Properties;
 
-public class FileProperties extends Properties implements FileIo {
+public class FileProperties implements FileIo {
 
     private final static Properties property = new Properties();
 
